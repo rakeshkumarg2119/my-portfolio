@@ -112,6 +112,75 @@ img{
     color:white;
     background-color: rgb(0,0,0);
 }
+.brand h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color:white;
+}
+.brand h1 span{
+    color:black;
+}
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+#header .header{
+    min-height: 8vh;
+    background-color: rgba(31, 30, 30, 0.24);
+}
+.header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding:0 10px;
+}
+.header .navlist ul{
+   list-style-type: none;
+   position: absolute;
+   background-color: rgb(31,30,30);
+   width:100vw;
+   height: 100vh;
+   left: 0;
+   top: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+   overflow-x: hidden ;
+}
+#header .navlist ul a{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+#header .navlist ul a::after{
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: rgba(240, 248, 255, 0.021);
+    font-size: 10rem;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+}
+#header .navlist ul li:hover a::after{
+   transform: translate(-50%, -50%) scale(1);
+   letter-spacing: initial;
+}
 #services .services{
     flex-direction: column;
     text-align: center;

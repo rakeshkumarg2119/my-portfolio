@@ -2,17 +2,18 @@
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 100px 20px;
 }
 #contact .contact-items{
-  width: 400px;
+  width: 100%;
 }
 #contact .contact-item{
-  width: 80%;
-  padding: 20px;
+  width: 100%;
+  max-width: 400px;
   text-align: center;
   border-radius: 10px;
   padding: 30px;
-  margin: 30px;
+  margin: 30px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +26,7 @@
 }
 #contact .icon{
     width: 70px;
+    height: 70px;
     margin: 0 auto;
     margin-bottom: 10px;
 }
@@ -37,4 +39,138 @@
     font-size: 1.3rem;
     line-height: 2rem;
     font-weight: 500;
+}
+#footer{
+    background-image: linear-gradient(60deg,#0077ff 0%, #485563 100%);
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer h2{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+#footer .social-item img{
+    filter: grayscale(1);
+    transition:.3 ease filter;
+}
+#footer .social-item:hover img{
+    filter: grayscale(0);
+}
+#footer p{
+    color: white;
+} 
+@media only screen and (min-width: 768px) {
+    .cta{
+        font-size: 2.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-title{
+        font-size: 6rem;
+    }
+    #one h1{
+        font-size: 7rem;
+    }
+    #services .service-bottom .service-item{
+        flex-basis: 45%;
+        margin: 2.5%;
+    }
+    #projects .project-items{
+        flex-direction: row;
+    }
+     #projects .project-items:nth-child(even){
+        flex-direction: row-reverse;
+     }
+      #projects .project-items{
+        height: 400px;
+        margin: 0;
+        width:100%;
+        border-radius: 0;
+      }
+      #projects .all-projects .project-info{
+        height: 100%;
+      }
+      #projects .all-projects .project-img{
+        height: 100%;
+      }
+    #about .about{
+        flex-direction: row;
+    }
+    #about .col-left{
+       width: 600px;
+       height: 400px;
+       padding-left: 60px;
+    }
+     #about .about .col-left .about-img::after{
+        left: -45px;
+        top: 34px;
+        height: 98%;
+        width: 98%;
+        border: 10px solid red;
+     }
+     #about .col-right{
+        text-align: left;
+        padding: 30px;
+     }
+     #about .col-right h1{
+         text-align: left;
+     }
+     #contact .contact{
+        flex-direction: column;
+        padding: 100px 0;
+        align-items: center;
+        justify-content: center;
+        min-width: 20vh;
+     }
+     #contact .contact-items{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0;
+     }
+     #contact .contact-item{
+        display: flex;
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+        gap: 20px; 
+     }
+     #contact .contact-item .icon{
+        height: 100px;
+        width: 100px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+        margin-right: 20px;
+     }
+     #contact .contact-item .icon img{
+        object-fit: contain;
+     }
+     #contact .contact-item .contact-info{
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+     }
+     @media  screen and (min-width: 1200px) {
+        #services .service-bottom .service-item{
+            flex-basis: 22%;
+            margin: 1.5%;
+        }
+     }
 }
